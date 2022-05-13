@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-  <script>
-    var linkmusic = "";
-  </script>
+  <div class="btnhome" style="float:right;">
+    <a class="inicio" href="/playlists">INICIO</a>
+  </div>
 <audio id="audio">
   <source src = "" type="audio/mpeg" id="musicasATocar">
 </audio>
@@ -88,7 +88,7 @@ var x=""
         document.getElementById("audio").load();
         document.getElementById("audio").play();
 
-        //document.getElementById("s_id").innerHTML=songid;
+        //document.getElementById("s_id").innerHTML=songid; REMOVER
         document.getElementById('name').innerHTML="BLOOD";
     }
 
