@@ -7,7 +7,11 @@
 <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
+  <script>
+    var linkmusic = "";
+  </script>
 <audio id="audio">
+  <source src = "" type="audio/mpeg" id="musicasATocar">
 </audio>
 </head>
 <body>
@@ -28,8 +32,7 @@
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Músicas</span>
 <div class="audio-player">
         <div class="cover-art">
-          <img src="static/images/demo/gallery/.png" style='width:100%;' border="0" alt="Null">
-
+          <img src="" style='width:100%;' border="0" alt="Null" id="imagemalbum">
         </div>
         <div class="info">
             <h3 id="name">Mete Um Block Nele</h3>
@@ -56,27 +59,6 @@
                     <polygon points="25,11.8 11.5,0 11.5,10.7 0.5,0 0.5,23.6 11.5,12.9 11.5,23.6 "/>
                 </svg>
             </div>
-            <div class="controls_player">
-                <svg id="shuffle_btn" viewBox="0 0 23 23" onclick="reset()">
-                    <path d="M7.3,6l0.4,2.8l3.6-5l-5-3.6l0.5,3C3.6,4.4,1.1,7.4,1.1,11c0,4.4,2.4,8,7.4,8.3v-2.7
-                                c-3-0.3-4.7-2.7-4.7-5.6C3.8,8.8,5.5,7,7.3,6z"/>
-                    <path d="M21.5,11c0-4.4-4-8-8-8.3v2.7c2,0.3,5.2,2.7,5.2,5.6c0,2.2-1.2,4-3,5l-0.4-2.8l-3.6,5l5,3.6l-0.6-3
-                                C19.4,17.6,21.5,14.6,21.5,11z"/>
-                </svg>
-
-<div class="dropdown">
-<button onclick="myFunction()"class="dropbtn">+</button>
-  <div id="myDropdown" class="dropdown-content">
-    {% if song==0 %}
-    <a href="/create_playlist">Create new Playlist</a>
-    {% else %}
-    {% for i in songs %}
-    <input onclick="change('{{i.title}}')" type="button" value="{{i.title}}" id="{{i.title}}">
-    {% endfor %}
-    {% endif %}
-  </div>
-</div>
-
 <script>
 var str=""
 var str1=""
@@ -99,11 +81,14 @@ var x=""
     var song =1;
     function update1(){
         song=1;
+        document.getElementById("musicasATocar").src = "../static/music/Kendrick Lamar - DAMN/BLOOD..mp3";
+        document.getElementById("imagemalbum").src = "../static/music/Kendrick Lamar - DAMN/Cover.jpg";       
         $("#play_btn").hide();
         $("#pause_btn").show();
         document.getElementById("audio").load();
         document.getElementById("audio").play();
-        document.getElementById("s_id").innerHTML=songid;
+
+        //document.getElementById("s_id").innerHTML=songid;
         document.getElementById('name').innerHTML="BLOOD";
     }
 
