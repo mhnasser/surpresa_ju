@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="btnhome" style="float:right;">
-    <a class="inicio" href="/playlists">PlayList</a>
+    <a href="/playlists" class="btn btn-primary btn-lg">Playlists</a>
   </div>
 <audio id="audio">
   <source src = "" type="audio/mpeg" id="musicasATocar">
@@ -32,7 +32,7 @@
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Músicas</span>
 <div class="audio-player">
         <div class="cover-art">
-          <img src="" style='width:100%;' border="0" alt="Null" id="imagemalbum">
+          <img src="../static/images/pisero/meteblock.PNG" style='width:100%;' border="0" alt="Null" id="imagemalbum">
         </div>
         <div class="info">
             <h3 id="name">Mete Um Block Nele</h3>
@@ -81,119 +81,113 @@ var x=""
     var song =1;
     function update1(){
         song=1;
-        document.getElementById("musicasATocar").src = "../static/music/Kendrick Lamar - DAMN/BLOOD..mp3";
-        document.getElementById("imagemalbum").src = "../static/music/Kendrick Lamar - DAMN/Cover.jpg";       
+        document.getElementById("musicasATocar").src = "../static/music/pisero/METE UM BLOCK NELE - João Gomes1.mp3";
+        document.getElementById("imagemalbum").src = "../static/images/pisero/meteblock.PNG";       
         $("#play_btn").hide();
         $("#pause_btn").show();
         document.getElementById("audio").load();
         document.getElementById("audio").play();
 
         //document.getElementById("s_id").innerHTML=songid; REMOVER
-        document.getElementById('name').innerHTML="BLOOD";
+        document.getElementById('name').innerHTML="METE UM BLOCK NELE - João Gomes";
     }
 
             function update2(){
               song=2;
+              document.getElementById("musicasATocar").src = "../static/music/pisero/pedaco.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/pedacodepecado.PNG"; 
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById("s_id").innerHTML=songid;
-              document.getElementById('name').innerHTML="DNA";
+              document.getElementById('name').innerHTML="MEU PEDACO DE PECADO - João Gomes";
           }
 
             function update3(){
               song=3;
-              namenext = "Don't Blame Me";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/Zé Felipe - Malvada (Videoclipe Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/malvada.PNG"; 
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById("s_id").innerHTML=songid;
-              document.getElementById('name').innerHTML="DUCKWORTH";
+              document.getElementById('name').innerHTML="Zé Felipe - Malvada";
           }
             function update4(){
               song=4;
-              namenext = "Happy New Year";
-              nameprev = "Did Something Bad";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/Vontade de Morder - Simone  Simaria, Zé Felipe   FitDance (Coreografia)  Dance Video.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/morder.PNG"; 
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById("s_id").innerHTML=songid;
-              document.getElementById('name').innerHTML="ELEMENT";
+              document.getElementById('name').innerHTML="Vontade de Morder - Simone  Simaria, Zé Felipe";
           }
 
             function update5(){
               song=5;
-              nameprev = "Delicate";
-              namenext = "Did Something Bad";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/ROLÊ - Tarcísio do Acordeon e Marcynho Sensação (Vai beber, vai chorar, vai ligar).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/role.PNG"; 
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById('name').innerHTML="FEAR";
-              document.getElementById("s_id").innerHTML=songid;
+              document.getElementById('name').innerHTML="ROLÊ - Tarcísio do Acordeon e Marcynho Sensação";
           }
 
             function update6(){
               song=6;
-              nameprev = "Delicate";
-              namenext = "So It Goes";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/Paulo Pires, MC Danny, Marcynho Sensação - Ameaça (Videoclipe Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/ameaca.PNG"; 
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById("s_id").innerHTML=songid;
-              document.getElementById('name').innerHTML="FEEL";
+              document.getElementById('name').innerHTML="Paulo Pires, MC Danny, Marcynho Sensação - Ameaça";
           }
 
             function update7(){
               song=7;
-              nameprev = "Look What You";
-              namenext = "Gorgeous";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/VOU FALAR QUE NÃO QUERO - Vitor Fernandes - CD Piseiro Apaixonado 2021.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/voufalar.PNG";
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById('name').innerHTML="GOD";
-              document.getElementById("s_id").innerHTML=songid;
+              document.getElementById('name').innerHTML="VOU FALAR QUE NÃO QUERO - Vitor Fernandes";
           }
 
             function update8(){
               song=8;
-              nameprev = "So It Goes";
-              namenext = "Gateway Car";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/Xand Aviao e Ze Vaqueiro - Superacao Digital (Clipe Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/superacao.PNG";
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById("s_id").innerHTML=songid;
-              document.getElementById('name').innerHTML="HUMBLE";
+              document.getElementById('name').innerHTML="Xand Aviao e Ze Vaqueiro - Superacao Digital";
           }
 
             function update9(){
               song=9;
-              nameprev = "Gorgeous";
-              namenext = "Did Something Bad";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/Zé Vaqueiro - Tenho Medo (Vídeo Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/medo.PNG";
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById("s_id").innerHTML=songid;
-              document.getElementById('name').innerHTML="LOVE";
+              document.getElementById('name').innerHTML="Zé Vaqueiro - Tenho Medo";
           }
 
             function update10(){
               song=10;
-              nameprev = "Happy New Year";
-              namenext = "Did Something Bad";
+              document.getElementById("musicasATocar").src = "../static/music/pisero/AQUELAS COISAS - João Gomes e Tarcísio do Acordeon (DVD Ao Vivo em Fortaleza).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/pisero/coisas.PNG";
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
-              document.getElementById("s_id").innerHTML=songid;
-              document.getElementById('name').innerHTML="LOYALTY";
+              document.getElementById('name').innerHTML="AQUELAS COISAS - João Gomes e Tarcísio do Acordeon";
           }
 
                     function update11(){

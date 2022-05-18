@@ -17,10 +17,14 @@ def pag_playlist():
     return render_template('album.html')
 
 @app.route("/Pisero")
-def musicas():
+def musicas_piseiro():
 
     return render_template('pisero.html')
 
+@app.route("/Sertanejo")
+def musicas_sertanejo():
+
+    return render_template('sertanejo.html')
 
 if __name__ == "__main__":
 
