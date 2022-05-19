@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Music Player</title>
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="btnhome" style="float:right;">
+    <a href="/playlists" class="btn btn-primary btn-lg">Playlists</a>
+  </div>
+<audio id="audio">
+  <source src = "../static/music/lovesongs/Hanson - Save Me.mp3" type="audio/mpeg" id="musicasATocar">
+</audio>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<button class="q" onclick="update1()">Hanson - Save Me</button>
+			<button class="q" onclick="update2()">Bruno Mars - Just The Way You Are</button>
+			<button class="q" onclick="update3()">Zé Felipe - Malvada</button>
+			<button class="q" onclick="update4()">Simone & Simaria, Zé Felipe - Vontade de Morder</button>
+			<button class="q" onclick="update5()">ROLÊ - Tarcísio do Acordeon e Marcynho Sensação</button>
+			<button class="q" onclick="update6()">Paulo Pires, MC Danny, Marcynho Sensação - Ameaça</button>
+			<button class="q" onclick="update7()">VOU FALAR QUE NÃO QUERO - Vitor Fernandes</button>
+			<button class="q" onclick="update8()">Xand Avião e Zé Vaqueiro - Superação Digital</button>
+			<button class="q" onclick="update9()">Tenho Medo - Zé Vaqueiro</button>
+			<button class="q" onclick="update10()">AQUELAS COISAS - João Gomes e Tarcísio do Acordeon</button>
+      <button class="q" onclick="#"></button>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Músicas</span>
+<div class="audio-player">
+        <div class="cover-art">
+          <img src="../static/images/lovesongs/meteblock.PNG" style='width:100%;' border="0" alt="Null" id="imagemalbum">
+        </div>
+        <div class="info">
+            <h3 id="name">Mete Um Block Nele</h3>
+            <p id="timeleft">00:00</p>
+            <div class="progressbar_slide">
+                <div class="progressbar_range"></div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="controls_plays">
+                <svg id="prev_btn" viewBox="0 0 24.5 23.6" onclick="prev()">
+                    <polygon points="0,11.8 13.5,0 13.5,10.7 24.5,0 24.5,23.6 13.5,12.9 13.5,23.6 "/>
+                </svg>
+                <svg id="plays_btn" viewBox="0 0 24.5 30.9">
+                    <g id="play_btn">
+                        <path d="M0,30.9L0,0l24.5,15.4L0,30.9z"/>
+                    </g>
+                    <g id="pause_btn">
+                        <rect x="0" y="0" width="8.2" height="30.9"/>
+                        <rect x="16.2" y="0" width="8.2" height="30.9"/>
+                    </g>
+                </svg>
+                <svg id="next_btn" viewBox="0 0 24.5 23.6" onclick="next()">
+                    <polygon points="25,11.8 11.5,0 11.5,10.7 0.5,0 0.5,23.6 11.5,12.9 11.5,23.6 "/>
+                </svg>
+            </div>
+<script>
+var str=""
+var str1=""
+var str2=""
+var presses=""
+var x=""
+  function change(x) {
+            str='/save_playlist/'+document.getElementById(x).value;
+            str1=str+'/'+document.getElementById("s_id").innerHTML;
+            console.log(str1);
+            window.open(str1,"_self");
+  }
+</script>
+            </div>
+        </div>
+    </div>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+      update0();
+    var song =1;
+    
+    function update0(){
+        song=1;
+        document.getElementById("musicasATocar").src = "../static/music/lovesongs/Hanson - Save Me.mp3";
+        document.getElementById("imagemalbum").src = "../static/images/lovesongs/saveme.PNG";       
+        $("#play_btn").show();
+        $("#pause_btn").hide();
+        document.getElementById("audio").load();
+        document.getElementById("audio").pause();
+        document.getElementById('name').innerHTML="Hanson - Save Me";
+    }
+
+    function update1(){
+        song=1;
+        document.getElementById("musicasATocar").src = "../static/music/lovesongs/Hanson - Save Me.mp3";
+        document.getElementById("imagemalbum").src = "../static/images/lovesongs/saveme.PNG";       
+        $("#play_btn").hide();
+        $("#pause_btn").show();
+        document.getElementById("audio").load();
+        document.getElementById("audio").play();
+
+        //document.getElementById("s_id").innerHTML=songid; REMOVER
+        document.getElementById('name').innerHTML="Hanson - Save Me";
+    }
+
+            function update2(){
+              song=2;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Bruno Mars - Just The Way You Are.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/theway.PNG"; 
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Bruno Mars - Just The Way You Are";
+          }
+
+            function update3(){
+              song=3;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Zé Felipe - Malvada (Videoclipe Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/malvada.PNG"; 
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Zé Felipe - Malvada";
+          }
+            function update4(){
+              song=4;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Vontade de Morder - Simone  Simaria, Zé Felipe   FitDance (Coreografia)  Dance Video.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/morder.PNG"; 
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Vontade de Morder - Simone  Simaria, Zé Felipe";
+          }
+
+            function update5(){
+              song=5;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/ROLÊ - Tarcísio do Acordeon e Marcynho Sensação (Vai beber, vai chorar, vai ligar).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/role.PNG"; 
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="ROLÊ - Tarcísio do Acordeon e Marcynho Sensação";
+          }
+
+            function update6(){
+              song=6;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Paulo Pires, MC Danny, Marcynho Sensação - Ameaça (Videoclipe Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/ameaca.PNG"; 
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Paulo Pires, MC Danny, Marcynho Sensação - Ameaça";
+          }
+
+            function update7(){
+              song=7;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/VOU FALAR QUE NÃO QUERO - Vitor Fernandes - CD Piseiro Apaixonado 2021.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/voufalar.PNG";
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="VOU FALAR QUE NÃO QUERO - Vitor Fernandes";
+          }
+
+            function update8(){
+              song=8;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Xand Aviao e Ze Vaqueiro - Superacao Digital (Clipe Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/superacao.PNG";
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Xand Aviao e Ze Vaqueiro - Superacao Digital";
+          }
+
+            function update9(){
+              song=9;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Zé Vaqueiro - Tenho Medo (Vídeo Oficial).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/medo.PNG";
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Zé Vaqueiro - Tenho Medo";
+          }
+
+            function update10(){
+              song=10;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/AQUELAS COISAS - João Gomes e Tarcísio do Acordeon (DVD Ao Vivo em Fortaleza).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/coisas.PNG";
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="AQUELAS COISAS - João Gomes e Tarcísio do Acordeon";
+          }
+
+                    function update11(){
+                      song=11;
+                      nameprev = "Happy New Year";
+                      namenext = "Did Something Bad";
+                      $("#play_btn").hide();
+                      $("#pause_btn").show();
+                        document.getElementById("audio").load();
+                        document.getElementById("audio").play();
+                        document.getElementById("s_id").innerHTML=songid;
+                        document.getElementById('name').innerHTML="LUST";
+                    }
+
+                    function update11(){
+                      song=12;
+                      nameprev = "Happy New Year";
+                      namenext = "Did Something Bad";
+                      $("#play_btn").hide();
+                      $("#pause_btn").show();
+                      document.getElementById("audio").load();
+                      document.getElementById("audio").play();
+                      document.getElementById("s_id").innerHTML=songid;
+                      document.getElementById('name').innerHTML="PRIDE";
+                    }
+
+                    function next(){
+                      if(song+1===13) song=12;
+                      song=((song+1)%13+13)%13;
+                      $("#play_btn").hide();
+                      $("#pause_btn").show();
+                      console.log(song);
+                      update="update"+song+"()";
+                      eval(update);
+                    }
+                    function prev(){
+                      if(song-1===0) song=2;
+                      song=((song-1)%13+13)%13;
+                      console.log(song);
+                      update="update"+song+"()";
+                      eval(update);
+                    }
+                    function reset(){
+                      update="update"+song+"()";
+                      eval(update);
+                      document.getElementById("audio").pause();
+                      $("#play_btn").show();
+                      $("#pause_btn").hide();
+                    }
+
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}       </script>
+        <script  src="/static/index.js"></script>
+        <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function addinplaylist()
+{
+      cur=mysql.connection.cursor()
+      cur.execute("SELECT * FROM songs_list WHERE album LIKE 'Jus%'")
+      albu7=cur.fetchall()
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+
+}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+</script>
+</body>
+</html>

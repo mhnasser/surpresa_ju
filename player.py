@@ -26,6 +26,11 @@ def musicas_sertanejo():
 
     return render_template('sertanejo.html')
 
+@app.route("/Lovesongs")
+def musicas_lovesongs():
+
+    return render_template('lovesongs.html')
+
 if __name__ == "__main__":
 
     app.run(debug=True)
