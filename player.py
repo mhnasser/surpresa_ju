@@ -2,10 +2,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Página
-# route
-# função
-
 @app.route("/")
 def pag_inicial():
 
