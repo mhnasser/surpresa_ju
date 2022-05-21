@@ -1,10 +1,7 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
-
-# Página
-# route
-# função
 
 @app.route("/")
 def pag_inicial():
@@ -36,6 +33,8 @@ def musicas_us():
 
     return render_template('us.html')
 
+
 if __name__ == "__main__":
 
-    app.run(debug=True)
+    port = int(os.getenv('PORT'), '5000')
+    app.run(host='0.0.0.0', port = port)
