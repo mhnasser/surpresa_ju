@@ -20,13 +20,13 @@
 			<button class="q" onclick="update1()">Hanson - Save Me</button>
 			<button class="q" onclick="update2()">Bruno Mars - Just The Way You Are</button>
 			<button class="q" onclick="update3()">Bruno Mars - Marry You</button>
-			<button class="q" onclick="update4()">Ed Sheeran - Photograph</button>
-			<button class="q" onclick="update5()">James Arthur - Impossible</button>
-			<button class="q" onclick="update6()">The Cab - Numbers</button>
-			<button class="q" onclick="update7()">David Archuleta - Crush</button>
-			<button class="q" onclick="update8()">Xand Avião e Zé Vaqueiro - Superação Digital</button>
-			<button class="q" onclick="update9()">Tenho Medo - Zé Vaqueiro</button>
-			<button class="q" onclick="update10()">AQUELAS COISAS - João Gomes e Tarcísio do Acordeon</button>
+			<button class="q" onclick="update4()">David Archuleta - Crush</button>
+			<button class="q" onclick="update5()">Ed Sheeran - Photograph</button>
+			<button class="q" onclick="update6()">James Arthur - Impossible</button>
+			<button class="q" onclick="update7()">John Legend - All of Me</button>
+			<button class="q" onclick="update8()">Let Her Go - Official Video</button>
+			<button class="q" onclick="update9()">Ne-Yo - So Sick</button>
+			<button class="q" onclick="update10()">The Cab - Numbers</button>
       <button class="q" onclick="#"></button>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Músicas</span>
@@ -106,7 +106,7 @@ var x=""
 
             function update2(){
               song=2;
-              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Bruno Mars - Just The Way You Are.mp3";
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Bruno Mars - Just The Way You Are [OFFICIAL VIDEO].mp3";
               document.getElementById("imagemalbum").src = "../static/images/lovesongs/theway.PNG"; 
               $("#play_btn").hide();
               $("#pause_btn").show();
@@ -117,7 +117,7 @@ var x=""
 
             function update3(){
               song=3;
-              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Bruno Mars - Marry You [Official Lyric Video] (1).mp3";
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Just The Way You Are - Bruno Mars (Lyrics).mp3";
               document.getElementById("imagemalbum").src = "../static/images/lovesongs/marry.PNG"; 
               $("#play_btn").hide();
               $("#pause_btn").show();
@@ -127,6 +127,17 @@ var x=""
           }
             function update4(){
               song=4;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/David Archuleta - Crush (Official Video).mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/crush.PNG"; 
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="David Archuleta - Crush";
+          }
+
+            function update5(){
+              song=5;
               document.getElementById("musicasATocar").src = "../static/music/lovesongs/Ed Sheeran - Photograph (Lyrics).mp3";
               document.getElementById("imagemalbum").src = "../static/images/lovesongs/photograph.PNG"; 
               $("#play_btn").hide();
@@ -136,8 +147,8 @@ var x=""
               document.getElementById('name').innerHTML="Ed Sheeran - Photograph";
           }
 
-            function update5(){
-              song=5;
+            function update6(){
+              song=6;
               document.getElementById("musicasATocar").src = "../static/music/lovesongs/James Arthur - Impossible.mp3";
               document.getElementById("imagemalbum").src = "../static/images/lovesongs/impossible.PNG"; 
               $("#play_btn").hide();
@@ -147,84 +158,49 @@ var x=""
               document.getElementById('name').innerHTML="James Arthur - Impossible";
           }
 
-            function update6(){
-              song=6;
+            function update7(){
+              song=7;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/John Legend - All of Me.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/allofme.PNG";
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="John Legend - All of Me";
+          }
+
+            function update8(){
+              song=8;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Let Her Go - Official Video.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/lethergo.PNG";
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Let Her Go - Official Video";
+          }
+
+            function update9(){
+              song=9;
+              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Ne-Yo - So Sick.mp3";
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/sosick.PNG";
+              $("#play_btn").hide();
+              $("#pause_btn").show();
+              document.getElementById("audio").load();
+              document.getElementById("audio").play();
+              document.getElementById('name').innerHTML="Ne-Yo - So Sick";
+          }
+
+            function update10(){
+              song=10;
               document.getElementById("musicasATocar").src = "../static/music/lovesongs/The Cab - Numbers.mp3";
-              document.getElementById("imagemalbum").src = "../static/images/lovesongs/numbers.PNG"; 
+              document.getElementById("imagemalbum").src = "../static/images/lovesongs/numbers.PNG";
               $("#play_btn").hide();
               $("#pause_btn").show();
               document.getElementById("audio").load();
               document.getElementById("audio").play();
               document.getElementById('name').innerHTML="The Cab - Numbers";
           }
-
-            function update7(){
-              song=7;
-              document.getElementById("musicasATocar").src = "../static/music/lovesongs/David Archuleta - Crush (Official Video).mp3";
-              document.getElementById("imagemalbum").src = "../static/images/lovesongs/crush.PNG";
-              $("#play_btn").hide();
-              $("#pause_btn").show();
-              document.getElementById("audio").load();
-              document.getElementById("audio").play();
-              document.getElementById('name').innerHTML="David Archuleta - Crush";
-          }
-
-            function update8(){
-              song=8;
-              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Xand Aviao e Ze Vaqueiro - Superacao Digital (Clipe Oficial).mp3";
-              document.getElementById("imagemalbum").src = "../static/images/lovesongs/superacao.PNG";
-              $("#play_btn").hide();
-              $("#pause_btn").show();
-              document.getElementById("audio").load();
-              document.getElementById("audio").play();
-              document.getElementById('name').innerHTML="Xand Aviao e Ze Vaqueiro - Superacao Digital";
-          }
-
-            function update9(){
-              song=9;
-              document.getElementById("musicasATocar").src = "../static/music/lovesongs/Zé Vaqueiro - Tenho Medo (Vídeo Oficial).mp3";
-              document.getElementById("imagemalbum").src = "../static/images/lovesongs/medo.PNG";
-              $("#play_btn").hide();
-              $("#pause_btn").show();
-              document.getElementById("audio").load();
-              document.getElementById("audio").play();
-              document.getElementById('name').innerHTML="Zé Vaqueiro - Tenho Medo";
-          }
-
-            function update10(){
-              song=10;
-              document.getElementById("musicasATocar").src = "../static/music/lovesongs/AQUELAS COISAS - João Gomes e Tarcísio do Acordeon (DVD Ao Vivo em Fortaleza).mp3";
-              document.getElementById("imagemalbum").src = "../static/images/lovesongs/coisas.PNG";
-              $("#play_btn").hide();
-              $("#pause_btn").show();
-              document.getElementById("audio").load();
-              document.getElementById("audio").play();
-              document.getElementById('name').innerHTML="AQUELAS COISAS - João Gomes e Tarcísio do Acordeon";
-          }
-
-                    function update11(){
-                      song=11;
-                      nameprev = "Happy New Year";
-                      namenext = "Did Something Bad";
-                      $("#play_btn").hide();
-                      $("#pause_btn").show();
-                        document.getElementById("audio").load();
-                        document.getElementById("audio").play();
-                        document.getElementById("s_id").innerHTML=songid;
-                        document.getElementById('name').innerHTML="LUST";
-                    }
-
-                    function update11(){
-                      song=12;
-                      nameprev = "Happy New Year";
-                      namenext = "Did Something Bad";
-                      $("#play_btn").hide();
-                      $("#pause_btn").show();
-                      document.getElementById("audio").load();
-                      document.getElementById("audio").play();
-                      document.getElementById("s_id").innerHTML=songid;
-                      document.getElementById('name').innerHTML="PRIDE";
-                    }
 
                     function next(){
                       if(song+1===13) song=12;

@@ -2,6 +2,10 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# Página
+# route
+# função
+
 @app.route("/")
 def pag_inicial():
 
@@ -26,6 +30,11 @@ def musicas_sertanejo():
 def musicas_lovesongs():
 
     return render_template('lovesongs.html')
+
+@app.route("/Us")
+def musicas_us():
+
+    return render_template('us.html')
 
 if __name__ == "__main__":
 
