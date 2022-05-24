@@ -1,40 +1,40 @@
 from flask import Flask, render_template
 import os
 
-application = Flask(__name__)
+app = Flask(__name__)
 
 
-@application.route("/")
+@app.route("/")
 def pag_inicial():
 
     return render_template("index.html")
 
 
-@application.route("/playlists")
+@app.route("/playlists")
 def pag_playlist():
 
     return render_template("album.html")
 
 
-@application.route("/Pisero")
+@app.route("/Pisero")
 def musicas_piseiro():
 
     return render_template("pisero.html")
 
 
-@application.route("/Sertanejo")
+@app.route("/Sertanejo")
 def musicas_sertanejo():
 
     return render_template("sertanejo.html")
 
 
-@application.route("/Lovesongs")
+@app.route("/Lovesongs")
 def musicas_lovesongs():
 
     return render_template("lovesongs.html")
 
 
-@application.route("/Us")
+@app.route("/Us")
 def musicas_us():
 
     return render_template("us.html")
@@ -42,5 +42,4 @@ def musicas_us():
 
 if __name__ == "__main__":
 
-    application.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
-
+    app.run(debug=True)
